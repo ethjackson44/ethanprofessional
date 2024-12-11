@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #87CEEB, #32CD32);
+            overflow: hidden;
+        }
+
+        #top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        #top-bar a {
+            color: #FFD700;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        #field {
+            position: relative;
+            width: 80%;
+            height: 60%;
+            background-color: #228B22;
+            border: 5px solid white;
+            border-radius: 10px;
+            margin-top: 60px; /* To avoid overlap with the top bar */
+        }
+
+        #ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg');
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #scoreboard {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="top-bar">
+        Check out my other websites:
+        <a href="scratch.html">From Scratch Website</a>
+        <a href="../index.html">Professional Page</a>
+    </div>
+
+    <div id="field">
+        <div id="scoreboard">Score: 0</div>
+        <div id="ball"></div>
+    </div>
+
+    <script>
+        const ball = document.getElementById('ball');
+        const field = document.getElementById('field');
+        const scoreboard = document.getElementById('scoreboard');
+
+        let score = 0;
+
+        // Set initial position of the ball
+        function setBallPosition() {
+            const fieldRect = field.getBoundingClientRect();
+            const ballSize = ball.offsetWidth;
+
+            const randomX = Math.random() * (fieldRect.width - ballSize);
+            const randomY = Math.random() * (fieldRect.height - ballSize);
+
+            ball.style.left = `${randomX}px`;
+            ball.style.top = `${randomY}px`;
+        }
+
+        // Increment score and move the ball
+        ball.addEventListener('click', () => {
+            score++;
+            scoreboard.textContent = `Score: ${score}`;
+            setBallPosition();
+        });
+
+        // Initialize the game
+        window.onload = () => {
+            setBallPosition();
+        };
+    </script>
+</body>
+</html>

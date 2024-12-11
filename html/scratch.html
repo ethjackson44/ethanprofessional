@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love football</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar styling */
+        #sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+        }
+
+        #sidebar a {
+            color: #00aaff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        #sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content styling */
+        #main-content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0077cc;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff8800;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #33aa33;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+
+        ul li, ol li {
+            line-height: 1.6;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h2>Menu</h2>
+        <a href="#section1">Introduction</a>
+        <a href="#section2">Scoring</a>
+        <a href="#section3">Rankings</a>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="content-wrapper">
+            <h1>Welcome to My Website</h1>
+
+            <section id="section1">
+                <h2>I love football!</h2>
+                <p>Check out my other professional website: <a href="../index.html">Professional Website</a></p>
+                <p>Check out my game: <a href="aiwebapp.html">Game</a></p>
+
+                <h3>Here are ways to score in football:</h3>
+                <ul>
+                    <li>Touchdown
+                        <div>
+                            <ol>
+                                <li>By passing the ball into the end zone</li>
+                                <li>By running into the end zone</li>
+                                <li>By recovering a fumble in the end zone</li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>Field Goal</li>
+                    <li>Safety</li>
+                </ul>
+            </section>
+
+            <br><br>
+
+            <img src="../assets/img/Football.jpeg" alt="description of image" width="optional-width" height="optional-height">
+
+            <br><br>
+
+            <section id="section2">
+                <h2>Rankings for College Football Teams</h2>
+                <h3>My favorite college football teams:</h3>
+                <ol>
+                    <li>BYU</li>
+                    <li>Utah</li>
+                    <li>Stanford</li>
+                </ol>
+            </section>
+
+            <br><br>
+
+            <section id="section3">
+                <h2>Up-to-Date Playoff Rankings</h2>
+                <a href="https://www.google.com/search?q=cfb+rankings">Rankings</a>
+            </section>
+
+            <br><br>
+
+            <!-- Embedded YouTube Video -->
+            <section id="youtube-section">
+                <h2>Watch a Football Highlight for BYU for Weeks 1 - 5</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VRsb_WIwov8?si=xusROd6E185P2wyT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+
+            <br><br>
+
+            <!-- Embedded Tableau Graph -->
+            <section id="tableau-section">
+                <h2>History of College Football Teams</h2>
+                <div class='tableauPlaceholder' id='viz1733936086861' style='position: relative'><noscript><a href='#'><img alt='The History of NCAA Football ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheHistoryofNCAAFootball&#47;TheHistoryofNCAAFootball&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TheHistoryofNCAAFootball&#47;TheHistoryofNCAAFootball' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheHistoryofNCAAFootball&#47;TheHistoryofNCAAFootball&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1733936086861');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='1027px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </section>
+
+        </div>
+    </div>
+
+</body>
+</html>
